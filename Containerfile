@@ -1,4 +1,4 @@
-FROM docker.io/jellyfin/jellyfin:latest
+FROM docker.io/jellyfin/jellyfin:10.10
 
 RUN apt update && \
     apt install -y python3-pip yt-dlp && \
