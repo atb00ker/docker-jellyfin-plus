@@ -1,4 +1,4 @@
-FROM docker.io/jellyfin/jellyfin:10.10
+FROM docker.io/jellyfin/jellyfin:latest
 
 RUN apt update && \
     apt install -y python3-pip yt-dlp && \
@@ -8,4 +8,4 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /logs && chown 1000:1000 /logs && \
-   mkdir /opt/transcodes && chown 1000:1000 /opt/transcodes
+    mkdir /opt/transcodes && chown 1000:1000 /opt/transcodes
